@@ -1,0 +1,73 @@
+﻿@model IEnumerable<AirlineProject.Models.Airline>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AirlineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepatureDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AirlineName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepatureDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.AirlineID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.AirlineID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.AirlineID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<img src="~/s.jpg" height="550" width="1100" />
+<br />
+<br />
+SriLankan Airlines (marketed as SriLankan) is the flag carrier of Sri Lanka and a member airline of the Oneworld airline alliance.
+ It is currently the largest airline in Sri Lanka by number of aircraft and destinations and was launched in 1979 as Air Lanka following
+ the termination of operations of the original Sri Lankan flag carrier Air Ceylon. Following its partial acquisition in 1998 by Emirates,
+ it was re-branded and the current livery was introduced. In 2008, the government of Sri Lanka acquired all the shares of the airline from Emirates.[5]
+ After ending the Emirates partnership, it retained its re-branded name and logo.[6] SriLankan Airlines operates over 560 flights per week across Asia.
+
+The Airline operates to 113 destinations in 51 countries (including codeshare operations) from its main hub located at Bandaranaike International
+ Airport near Colombo. SriLankan Airlines joined the oneworld airline alliance on 1 May 2014<br /><br />
+
+<img src="~/it.jpg" height="550" width="1100" />
+<br />
+<br />
+<p>
+    IndiGo is an Indian low-cost airline headquartered in Gurugram, Haryana, India. It is the largest airline in India by passengers carried
+    and fleet size, with a 59.24% domestic market share as of August 2020.[8] It is also the largest individual Asian low-cost carrier in terms
+    of jet fleet size and passengers carried, and the sixth largest carrier in Asia with over 6.4 crore (64 million) passengers carried in financial
+    year 2018–19. The airline operates 1,500 flights everyday[9] to 87 destinations – 63 domestic and 24 international.[10] It has its primary hub
+    at IGI Airport, Delhi.[11]
+
+    The airline was founded as a private company by Rahul Bhatia of InterGlobe Enterprises and Rakesh Gangwal in 2006. It took delivery of its first
+    aircraft in July 2006 and commenced operations a month later. The airline became the largest Indian carrier by passenger market share in 2012.
+    The company went public in November 2015<br /><br />
+</p>
+<img src="~/u.jpeg" height="550" width="1100" />
+<br />
+<br />
+United Airlines, Inc. is a major American airline headquartered at Willis Tower in Chicago, Illinois. United operates
+ a large domestic and international route network spanning cities large and small across the United States and all six continents.

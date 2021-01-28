@@ -1,0 +1,54 @@
+﻿@model IEnumerable<AirlineProject.Models.StaffMember>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<img src="~/ah.jpeg" height="550" width="1100" />
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffMemberName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Airline_ID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffMemberName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Airline_ID.AirlineID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StaffMemberID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.StaffMemberID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.StaffMemberID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
